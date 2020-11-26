@@ -1,0 +1,16 @@
+.survey{
+    width: 60%;
+    margin: 20px auto;
+    background-color: #71c9ce;
+    border-radius: 10px;
+}
+
+.qItem{
+    width: 150%;
+    margin-left: -25%;
+}
+
+.textareaInput{
+    width: 130%;
+    margin-left: -15%;
+}

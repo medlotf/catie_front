@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react'
+import { Route } from 'react-router-dom'
+
 import './App.css';
+
+import AdminDashboard from './Components/views/AdminDashboard';
+import Survey from './Components/views/Survey';
+import AdminQuestionForm from './Components/views/AdminQuestionForm';
+import NavBar from './Components/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <div className="container">
+
+        <Route exact path="/" component={Survey} />
+        <Route exact path="/admin" component={AdminDashboard} />
+        <Route exact path="/admin/addQuestion" component={AdminQuestionForm} />
+      </div>
     </div>
   );
 }
